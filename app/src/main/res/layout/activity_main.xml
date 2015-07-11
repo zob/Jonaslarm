@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/start_button"
+        android:text="@string/start_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onStartClick"
+        />
+    <Button
+        android:id="@+id/cancel_button"
+        android:text="@string/cancel_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_button"
+        android:onClick="onCancelClick"
+        />
+
+
+    <TextView android:id="@+id/sample_output"
+        style="@style/Widget.SampleOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_message"
+        android:layout_below="@id/cancel_button"/>
+
+</RelativeLayout>
