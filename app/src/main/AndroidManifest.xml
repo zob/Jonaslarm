@@ -31,7 +31,8 @@
             </intent-filter>
         </receiver>-->
         <!--<service android:name=".SampleSchedulingService" />-->
-        <service android:name=".SampleSchedulingService" />
+        <!--<service android:name=".SampleSchedulingService" />-->
+        <service android:name=".ServerPollService" />
     </application>
 
 </manifest>

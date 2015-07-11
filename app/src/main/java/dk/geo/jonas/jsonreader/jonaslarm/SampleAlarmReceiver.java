@@ -21,7 +21,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
     // The pending intent that is triggered when the alarm fires.
     private PendingIntent alarmIntent;
 
-    public static final long THIRTY_SECONDS = 30 * 1000;
+    public static final long INTERVAL_THIRTY_SECONDS = 30 * 1000;
     public static final long INTERVAL_FIVE_MINUTES = 5 * 60 * 1000;
 
 
@@ -44,9 +44,9 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
          * This intent holds an extra identifying the wake lock.
          */
 
-        
 
-        Intent service = new Intent(context, SampleSchedulingService.class);
+
+        Intent service = new Intent(context, ServerPollService.class);
         // Start the service, keeping the device awake while it is launching.
         startWakefulService(context, service);
         // END_INCLUDE(alarm_onreceive)
@@ -100,7 +100,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
          *         AlarmManager.INTERVAL_HALF_HOUR, alarmIntent);
          */
 
-        alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 0, INTERVAL_FIVE_MINUTES, alarmIntent);
+        alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, INTERVAL_THIRTY_SECONDS, INTERVAL_THIRTY_SECONDS, alarmIntent);
 
         // Her tester jeg
 //        alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 15 * 1000, alarmIntent);
