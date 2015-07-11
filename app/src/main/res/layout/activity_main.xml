@@ -8,6 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onStartClick"
+        android:background="@drawable/custom_button_green"
+        style="@style/button_text"
+        android:layout_margin="8dp"
         />
     <Button
         android:id="@+id/cancel_button"
@@ -16,6 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/start_button"
         android:onClick="onCancelClick"
+        android:background="@drawable/custom_button_red"
+        style="@style/button_text"
+        android:layout_margin="8dp"
         />
 
 
@@ -24,6 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/intro_message"
-        android:layout_below="@id/cancel_button"/>
+        android:layout_below="@id/cancel_button"
+        android:layout_margin="8dp"
+        />
 
 </RelativeLayout>
