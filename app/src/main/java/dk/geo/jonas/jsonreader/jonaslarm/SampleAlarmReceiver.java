@@ -43,6 +43,9 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
          * In this example, we simply create a new intent to deliver to the service.
          * This intent holds an extra identifying the wake lock.
          */
+
+        
+
         Intent service = new Intent(context, SampleSchedulingService.class);
         // Start the service, keeping the device awake while it is launching.
         startWakefulService(context, service);
