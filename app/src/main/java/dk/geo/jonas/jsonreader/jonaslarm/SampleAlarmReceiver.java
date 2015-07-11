@@ -13,7 +13,7 @@ import java.util.Calendar;
 
 /**
  * When the alarm fires, this WakefulBroadcastReceiver receives the broadcast Intent
- * and then starts the IntentService {@code SampleSchedulingService} to do some work.
+ * and then starts the IntentService {@code ServerPollService} to do some work.
  */
 public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
     // The app's AlarmManager, which provides access to the system alarm services.

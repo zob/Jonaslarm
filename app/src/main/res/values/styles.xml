@@ -5,7 +5,7 @@
     <style name="Theme.Base" parent="android:Theme.Light" />
     <style name="Theme.Sample" parent="Theme.Base" />
 
-    
+
     <!-- Widget styling -->
 
     <style name="Widget" />

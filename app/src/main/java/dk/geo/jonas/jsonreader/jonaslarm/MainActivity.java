@@ -2,6 +2,8 @@ package dk.geo.jonas.jsonreader.jonaslarm;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +18,7 @@ import android.widget.Toast;
  * checks it for the search string "doodle". If it finds this string, that indicates
  * that the page contains a custom doodle instead of the standard Google logo.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     SampleAlarmReceiver alarm = new SampleAlarmReceiver();
     Button startButton;

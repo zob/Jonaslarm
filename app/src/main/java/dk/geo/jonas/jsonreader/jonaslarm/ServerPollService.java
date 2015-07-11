@@ -115,7 +115,7 @@ public class ServerPollService extends IntentService {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.ic_launcher)
-                        .setContentTitle(getString(R.string.doodle_alert))
+                        .setContentTitle(getString(R.string.server_alert))
                         .setStyle(new NotificationCompat.BigTextStyle()
                                 .bigText(msg))
                         .setContentText(msg);

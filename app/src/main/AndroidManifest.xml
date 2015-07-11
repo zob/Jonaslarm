@@ -10,7 +10,10 @@
 
     <application android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
-        android:theme="@style/Theme.Sample">
+
+        android:theme="@style/Theme.AppCompat"
+        >
+
 
         <activity android:name=".MainActivity"
             android:label="@string/app_name"
@@ -30,8 +33,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>-->
-        <!--<service android:name=".SampleSchedulingService" />-->
-        <!--<service android:name=".SampleSchedulingService" />-->
+
         <service android:name=".ServerPollService" />
     </application>
 

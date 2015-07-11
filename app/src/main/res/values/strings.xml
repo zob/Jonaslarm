@@ -1,18 +1,15 @@
 <resources>
     <string name="app_name">Jonaslarm</string>
 
-    <string name="intro_message">Welcome to <b>Scheduler</b>!
-        This sample demonstrates how you can schedule an alarm that causes a service to
-        be started. This is useful when you want to schedule alarms that initiate
-        long-running operations. Click START ALARM to activate an alarm to check
-        the Google home page for a custom doodle once a day. If the app finds a doodle,
-        it posts a \"Doodle Alert\" as a notification. Click CANCEL ALARM to cancel the
-        alarm. Once the alarm is active, it automatically restarts when the device is
-        rebooted.</string>
-    <string name="start_text">Start Alarm</string>
-    <string name="cancel_text">Cancel Alarm</string>
-    <string name="doodle_alert">Doodle Alert</string>
-    <string name="doodle_found">There is a Google doodle today!!</string>
-    <string name="no_doodle">No Google doodle today.</string>
+    <string name="intro_message">
+        This app checks a specific group of servers in specified intervals for their states and
+        sets an android notification according to server response. Click START to start polling
+        in background. The app itself can be closed after starting the service. Click CANCEL
+        to cancel the polling (a bug here - it doesn\'t stop). Once the alarm is active, it
+        automatically restarts when the device is rebooted (disabled feature for now).</string>
+    <string name="start_text">Start</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="server_alert">Server Status Alert</string>
+
     <string name="connection_error">Connection error.</string>
 </resources>
