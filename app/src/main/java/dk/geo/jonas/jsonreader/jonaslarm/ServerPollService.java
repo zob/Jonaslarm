@@ -45,7 +45,7 @@ public class ServerPollService extends IntentService {
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
+     protected void onHandleIntent(Intent intent) {
         // BEGIN_INCLUDE(service_onhandle)
         // The URL from which to fetch content.
 
@@ -73,16 +73,22 @@ public class ServerPollService extends IntentService {
         try {
             jsonDataObject = json.getJSONObject("data");
             serverStatusString = jsonDataObject.getString("Status");
+            if (serverStatusString != "AVAILABLE") {
+
+                sendNotification("Server is Unavailable");
+                Log.i(TAG, "Server is " + serverStatusString);
+            }
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         ServerStatus serverStatus = ServerStatus.valueOf(serverStatusString);
         switch (serverStatus) {
-            case AVAILABLE:
+            /*case AVAILABLE:
                 sendNotification("Server is Available");
                 Log.i(TAG, "Server is " + serverStatusString);
-                break;
+                break;*/
             case NOT_TESTED:
                 sendNotification("Server is not tested");
                 Log.i(TAG, "Server is " + serverStatusString);
@@ -96,9 +102,9 @@ public class ServerPollService extends IntentService {
                 Log.i(TAG, "Server is " + serverStatusString);
                 break;
             // This default case shouldn't happen - there should be no status other than the 4 above.
-            default:
+            /*default:
                 sendNotification("WTF? " + serverStatus.toString());
-                Log.i(TAG, "This should not be possible. Server is " + serverStatusString);
+                Log.i(TAG, "This should not be possible. Server is " + serverStatusString);*/
         }
 
 
